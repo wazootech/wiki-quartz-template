@@ -1,0 +1,18 @@
+# Wiki CLI vault for Quartz publishing (content/ is the Quartz source tree).
+wiki:
+  inputs:
+    - content
+  filename_pattern: "[A-Za-z0-9_()-]+\\.md"
+
+graph:
+  content_predicate: schema:articleBody
+  context:
+    schema: https://schema.org/
+    wiki: https://wazootech.github.io/wiki-quartz-template/content/
+
+link:
+  style: markdown
+
+lint:
+  broken_links: warning
+  filename_pattern: warning

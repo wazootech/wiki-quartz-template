@@ -1,0 +1,8 @@
+{
+  "name": "wiki-quartz-template",
+  "private": true,
+  "scripts": {
+    "quartz:build": "npx quartz build",
+    "quartz:serve": "npx quartz build --serve"
+  }
+}
