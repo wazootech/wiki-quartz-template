@@ -11,7 +11,7 @@ graph:
     wiki: https://wazootech.github.io/wiki-quartz-template/content/
 
 link:
-  style: markdown
+  style: standard
 
 lint:
   broken_links: warning
