@@ -28,7 +28,7 @@ jobs:
       - run: pip install wazootech-wiki
       - run: wiki check --strict -v
       - run: wiki lint --strict -v
-      - run: npm ci
+      - run: npm install
       - run: npm run quartz:build
       - uses: actions/upload-pages-artifact@v3
         with:
