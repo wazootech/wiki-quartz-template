@@ -22,17 +22,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
       - run: pip install wazootech-wiki
       - run: wiki check --strict -v
       - run: wiki lint --strict -v
-      - run: npm install
-      - run: npm run quartz:build
+      - run: wiki build --output-dir _site --site-base-url /
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: _site
 
   deploy:
     needs: build
