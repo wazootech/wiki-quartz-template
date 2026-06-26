@@ -33,3 +33,37 @@ Point your vault at `content/` or symlink it. Keep Wikipedia-style filenames; us
 
 - [#16](https://github.com/wazootech/wiki/issues/16)
 - [Obsidian integration](https://github.com/wazootech/wiki/blob/main/docs/wiki/Obsidian_Integration.md)
+
+## Deployment
+
+### GitHub Pages (preferred)
+
+1. Go to **Settings &rarr; Pages &rarr; Source: GitHub Actions**
+2. Push to the default branch &mdash; the \.github/workflows/deploy-pages.yml\ workflow builds the Quartz site and deploys automatically
+3. Your site appears at \https://{org}.github.io/{repo}/\
+
+### Vercel
+
+1. Import this repo at [vercel.com/new](https://vercel.com/new)
+2. **Build command:** \
+pm install && npx quartz build\
+3. **Output directory:** \public\
+4. Deploy
+
+### Netlify
+
+1. Import this repo at [app.netlify.com/start](https://app.netlify.com/start)
+2. **Build command:** \
+pm install && npx quartz build\
+3. **Publish directory:** \public\
+4. Deploy
+
+### Cloudflare Pages
+
+1. Import this repo in the Cloudflare dashboard
+2. **Build command:** \
+pm install && npx quartz build\
+3. **Output directory:** \public\
+4. Deploy
+
+See [Quartz hosting docs](https://quartz.jzhao.xyz/hosting/) for more options.
