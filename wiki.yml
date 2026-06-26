@@ -9,10 +9,3 @@ graph:
   context:
     schema: https://schema.org/
     wiki: https://wazootech.github.io/wiki-quartz-template/content/
-
-link:
-  style: markdown
-
-lint:
-  broken_links: warning
-  filename_pattern: warning
